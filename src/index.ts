@@ -6,11 +6,12 @@ import { getState, saveState, info } from "@actions/core";
 const isPost = !!getState("isPost");
 
 const main = async () => {
-	if (await isInstalled()) {
-		info("Skipping attic installation because it is already installed");
-	} else {
-		await install();
-	}
+	await install();
+	// if (await isInstalled()) {
+	// 	info("Skipping attic installation because it is already installed");
+	// } else {
+	// 	await install();
+	// }
 	await configure();
 };
 
