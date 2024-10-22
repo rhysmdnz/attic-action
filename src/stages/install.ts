@@ -11,7 +11,7 @@ export const install = async () => {
 	core.info("Installing attic");
 
 	try {
-		await exec("nix", ["profile", "install", "github:zhaofengli/attic#attic-client"]);
+		await exec("nix", ["profile", "install", "nixpkgs#attic-client"]);
 	} catch (e) {
 		core.setFailed(`Action failed with error: ${e}`);
 	}
